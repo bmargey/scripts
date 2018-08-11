@@ -3,8 +3,6 @@
 use strict;
 use warnings;
 
-printf("%d %s%s\n",
-	$_,
-	$_ % 3 ? "" : "Fizz",
-	$_ % 7 ? "" : "Buzz"
-) for (1..100);
+use feature q{say};
+
+say(q{Fizz}x!($_ % 3) . q{Buzz}x!($_ % 5) || $_) for (1..100);
