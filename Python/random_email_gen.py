@@ -30,6 +30,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
 	"count", 
 	help="number of emails required", 
+	nargs='?',
+	const=1,
 	type=int,
 	default=1
 )
