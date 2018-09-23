@@ -27,7 +27,7 @@ sub _get_median {
 
 	my $mid_pos = (($hlen * 2) % 2) 
 		? $segments[$hlen]
-		: ($segments[$hlen] + $segments[($hlen) - 1]) / 2;
+		: ($segments[$hlen] + $segments[$hlen - 1]) / 2;
 
 	return $nums->[$mid_pos]; 
 }
@@ -37,7 +37,7 @@ my @srt = sort { $a <=> $b } @nums;
 warn Dumper \@srt;
 
 my $cent_pos = ($len + 1) / 2; 
-my $lwr = ($len % 2) ? $cent_pos - 1: $cent_pos;
+my $lwr = ($len % 2) ? $cent_pos - 1 : $cent_pos;
 
 my $fns = [
 	$srt[0], 
