@@ -10,8 +10,7 @@ namespace ArrayProcessing
     class IntArrays
     {
 
-        public static int getMedian(int[] inputRef)
-        {
+        public static int getMedian(int[] inputRef) {
 
             Array.Sort(inputRef);
             int len = inputRef.Length;
@@ -28,24 +27,21 @@ namespace ArrayProcessing
         }
 
         public static int getMean(int[] inputRef) {
-
+            
             return getSum(inputRef) / inputRef.Length;
         }
 
-        public static int getSum(int[] inputRef)
-        {
-
+        public static int getSum(int[] inputRef) {
+            
             int sum = 0;
-            foreach (int num in inputRef)
-            {
+            foreach (int num in inputRef) {
                 sum += num;
             }
 
             return sum;
         }
 
-        static void Main()
-        {
+        static void Main() {
 
             int[] ints = { 2, 34, 5, 54, 23, 28, 7 };
             Console.WriteLine(" Array [{0}]", String.Join(", ", ints));
